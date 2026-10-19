@@ -1,0 +1,309 @@
+@import "tailwindcss";
+
+/* ==========================================================================
+   Pixel Island UI — Canonical Design System Tokens & Pixel Craftsmanship Rules
+   Inspired by animal-island-ui, reimagined in crisp 8-bit / 16-bit Pixel Art
+   ========================================================================== */
+
+:root {
+  /* Core Brand Palette — Cozy Mint Teal Island */
+  --px-primary: #19c8b9;
+  --px-primary-hover: #35d6c8;
+  --px-primary-active: #129f93;
+  --px-primary-shadow: #0d7e74;
+  --px-primary-soft: #e4faf7;
+
+  /* Hero Meadow Palette */
+  --px-meadow-top: #6bc489;
+  --px-meadow-bottom: #8bd39c;
+  --px-hero-title: #fff9e6;
+
+  /* Warm Earth-Tone Ink Hierarchy (Never pure #000) */
+  --px-ink: #4d351e;
+  --px-ink-strong: #3a2614;
+  --px-ink-body: #695036;
+  --px-ink-muted: #937f66;
+  --px-ink-disabled: #bfb29b;
+
+  /* Parchment & Cream Surfaces */
+  --px-bg: #f8f6eb;
+  --px-surface: #fdfaf0;
+  --px-surface-warm: #f6f0da;
+  --px-surface-sunk: #efe7cc;
+  --px-input-bg: #fffdf2;
+  --px-input-disabled: #ebe5d5;
+
+  /* Crisp Pixel Borders & Shadows */
+  --px-border: #5c4328;
+  --px-border-soft: #9f8d73;
+  --px-border-light: #d6cbb5;
+  --px-shadow-card: #cabfa6;
+  --px-shadow-btn: #9e8e77;
+
+  /* Game Semantic Status Colors */
+  --px-success: #66b92e;
+  --px-success-shadow: #448419;
+  --px-warning: #f5b81c;
+  --px-warning-shadow: #bd8809;
+  --px-danger: #e25555;
+  --px-danger-shadow: #a53131;
+  --px-focus: #ffcc00;
+
+  /* Sidebar Colors */
+  --px-sidebar-bg: #fcf8ea;
+  --px-sidebar-hover: #e2eaf7;
+  --px-sidebar-active: #6f8fe2;
+  --px-sidebar-active-shadow: #4a67b5;
+
+  /* Font Stacks */
+  --px-font-display: 'Silkscreen', 'Press Start 2P', 'Noto Sans SC', sans-serif;
+  --px-font-arcade: 'Press Start 2P', 'Silkscreen', monospace;
+  --px-font-mono: 'VT323', ui-monospace, SFMono-Regular, Menlo, monospace;
+  --px-font-body: 'Nunito', 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Theme Preset 2: Sunset Coral Island */
+[data-px-theme='coral'] {
+  --px-primary: #ff7a59;
+  --px-primary-hover: #ff9277;
+  --px-primary-active: #e05d3c;
+  --px-primary-shadow: #b54225;
+  --px-primary-soft: #fff0ec;
+  --px-meadow-top: #f29f67;
+  --px-meadow-bottom: #f6b97e;
+  --px-sidebar-active: #e87264;
+  --px-sidebar-active-shadow: #b84a3d;
+}
+
+/* Theme Preset 3: Starry Lavender Valley */
+[data-px-theme='starry'] {
+  --px-primary: #9368e9;
+  --px-primary-hover: #a884f0;
+  --px-primary-active: #784cd1;
+  --px-primary-shadow: #5731a6;
+  --px-primary-soft: #f3edff;
+  --px-meadow-top: #6f74c9;
+  --px-meadow-bottom: #8e92de;
+  --px-sidebar-active: #8464d8;
+  --px-sidebar-active-shadow: #5c3eae;
+}
+
+/* Theme Preset 4: Retro GameBoy Olive */
+[data-px-theme='gameboy'] {
+  --px-primary: #6ea820;
+  --px-primary-hover: #81bd2f;
+  --px-primary-active: #578717;
+  --px-primary-shadow: #3d630c;
+  --px-primary-soft: #eef7dc;
+  --px-meadow-top: #7ea346;
+  --px-meadow-bottom: #9bbd5e;
+  --px-bg: #eef2dc;
+  --px-surface: #f5f8e8;
+  --px-surface-warm: #e5ecd0;
+  --px-sidebar-bg: #f1f5e1;
+  --px-sidebar-active: #5f8d24;
+  --px-sidebar-active-shadow: #406313;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: var(--px-font-body);
+  color: var(--px-ink);
+  background-color: var(--px-bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+.px-font-display {
+  font-family: var(--px-font-display);
+}
+
+.px-font-arcade {
+  font-family: var(--px-font-arcade);
+}
+
+.px-font-mono {
+  font-family: var(--px-font-mono);
+}
+
+.px-crisp {
+  image-rendering: pixelated;
+  shape-rendering: crispEdges;
+}
+
+/* Pixel Stepped Box Frame Utility */
+.px-box {
+  background: var(--px-surface);
+  border: 2px solid var(--px-border);
+  box-shadow:
+    0 4px 0 0 var(--px-shadow-card),
+    inset 0 2px 0 0 rgba(255, 255, 255, 0.75);
+}
+
+.px-box-sm {
+  border: 2px solid var(--px-border);
+  box-shadow: 0 3px 0 0 var(--px-shadow-card);
+}
+
+/* Subtle Pixel Polka Wallpaper for Content Pages */
+.px-content-wallpaper {
+  background-color: var(--px-bg);
+  background-image:
+    radial-gradient(rgba(159, 141, 115, 0.16) 1.5px, transparent 1.5px),
+    radial-gradient(rgba(159, 141, 115, 0.1) 1.5px, transparent 1.5px);
+  background-size: 24px 24px;
+  background-position: 0 0, 12px 12px;
+}
+
+/* Sidebar Pixel Gingham Strip Wallpaper */
+.px-sidebar-wallpaper {
+  background-color: var(--px-sidebar-bg);
+  background-image:
+    linear-gradient(90deg, rgba(226, 216, 192, 0.25) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(226, 216, 192, 0.25) 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+/* Keyframes */
+@keyframes px-float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes px-float-slow {
+  0%, 100% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(4px, -10px);
+  }
+}
+
+@keyframes px-blink {
+  0%, 49% {
+    opacity: 1;
+  }
+  50%, 100% {
+    opacity: 0;
+  }
+}
+
+@keyframes px-bounce-arrow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+}
+
+@keyframes px-shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes px-stripes {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 24px 0;
+  }
+}
+
+@keyframes px-snowfall {
+  0% {
+    transform: translateY(-20px) translateX(0px);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateY(340px) translateX(24px);
+    opacity: 0;
+  }
+}
+
+@keyframes px-zoom-in {
+  from {
+    opacity: 0;
+    transform: scale(0.94) translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes px-sparkle-pop {
+  0% {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-px-float {
+  animation: px-float 3.6s ease-in-out infinite;
+}
+
+.animate-px-float-slow {
+  animation: px-float-slow 6s ease-in-out infinite;
+}
+
+.animate-px-blink {
+  animation: px-blink 1s steps(1) infinite;
+}
+
+.animate-px-bounce-arrow {
+  animation: px-bounce-arrow 1.4s steps(4) infinite;
+}
+
+.animate-px-zoom {
+  animation: px-zoom-in 0.18s cubic-bezier(0.2, 0.9, 0.3, 1) forwards;
+}
+
+/* Custom Pixel Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(235, 227, 205, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c5b699;
+  border: 1px solid #8a7759;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ab9878;
+}
