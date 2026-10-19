@@ -10,7 +10,7 @@ const meta: Meta<typeof PixelTitle> = {
     docs: {
       description: {
         component:
-          '致敬 animal-island-ui 标志性的燕尾丝带标题横幅（PixelTitle），采用双侧阶梯燕尾折角 + 12 色海岛主题色板。',
+          '燕尾丝带标题横幅（PixelTitle），采用双侧阶梯燕尾折角与 12 色海岛主题色板。',
       },
     },
   },

@@ -80,7 +80,7 @@ export function App() {
     );
   }
 
-  /* Sidebar Menu Content (Modeled directly after animal-island-ui's 220px cozy sidebar) */
+  /* Sidebar Menu Content (Cozy 236px island sidebar) */
   const renderSidebarMenu = () => {
     const q = sidebarFilter.trim().toLowerCase();
 
@@ -252,7 +252,7 @@ export function App() {
         {renderSidebarMenu()}
       </aside>
 
-      {/* Mobile Top Bar (Matches animal-island-ui mobile adaptation spec) */}
+      {/* Mobile Top Bar (Responsive mobile navigation) */}
       <div className="md:hidden fixed top-0 inset-x-0 h-[52px] px-3 bg-[#fffcf4]/95 backdrop-blur-md border-b-2 border-[#e8e2d6] z-40 flex items-center justify-between">
         <button
           type="button"

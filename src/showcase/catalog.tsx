@@ -1049,7 +1049,7 @@ export const COMPONENT_CATALOG: ComponentCatalogItem[] = [
     category: 'feedback',
     icon: 'moon',
     storyComponentId: 'background',
-    desc: '致敬 animal-island-ui 标志性的深藍夜空落雪加载器与暖白光泽扫掠骨架屏。',
+    desc: '深藍夜空落雪加载器与暖白光泽扫掠骨架屏，营造静谧的海岛夜色氛围。',
     miniPreview: () => (
       <span className="px-2.5 py-1 text-xs font-bold bg-[#1c2541] text-[#e0fbfc] border border-[#5bc0be] rounded-[3px]">
         ❄️ 夜空像素飘雪

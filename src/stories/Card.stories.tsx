@@ -10,7 +10,7 @@ const meta: Meta<typeof PixelCard> = {
     docs: {
       description: {
         component:
-          '海岛像素卡片容器（PixelCard），复刻 animal-island-ui 12 色海岛色卡体系与零图片 CSS 波点壁纸，并额外内置经典黑底白框 RPG 对话框风格。',
+          '海岛像素卡片容器（PixelCard），内置 12 色海岛色卡体系与零图片 CSS 波点壁纸，并额外提供经典黑底白框 RPG 对话框风格。',
       },
     },
   },

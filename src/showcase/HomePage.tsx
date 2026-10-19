@@ -84,7 +84,7 @@ const FEATURES: Array<{
   {
     icon: 'island',
     title: '像素海岛设计语言',
-    desc: '融合 animal-island-ui 治愈暖棕羊皮纸色板与 8-Bit 阶梯硬阴影、燕尾丝带横幅与铆钉边框。',
+    desc: '治愈暖棕羊皮纸色板、8-Bit 阶梯硬阴影、燕尾丝带横幅与铆钉边框，构成完整的海岛视觉语言。',
     color: 'mint',
   },
   {
@@ -163,7 +163,7 @@ export const HomePage: React.FC<HomePageProps> = ({
   return (
     <div className="w-full overflow-x-hidden">
       {/* =====================================================================
-          HERO BANNER — Inspired by animal-island-ui's meadow floating-icon Hero
+          HERO BANNER — Meadow floating-icon hero
           ===================================================================== */}
       <section
         style={{
@@ -222,8 +222,7 @@ export const HomePage: React.FC<HomePageProps> = ({
             </div>
 
             <p className="text-base sm:text-lg font-bold text-[#2f2113] bg-[#fffdf2]/80 backdrop-blur-[2px] border-2 border-[var(--px-border)]/30 rounded-[5px] px-4 py-3 max-w-xl leading-relaxed mb-7">
-              致敬 <code className="px-1.5 py-0.5 bg-[#efe7cc] rounded text-sm">animal-island-ui</code>{' '}
-              的海岛治愈系像素风格 React 组件库。内置 28+ 原创像素组件、12 色波点海岛色卡，并集成{' '}
+              海岛治愈系像素风格 React 组件库。内置 28+ 原创像素组件、12 色波点海岛色卡，并集成{' '}
               <strong>Storybook 10 (CSF 3.0)</strong> 进行交互式文档管理与实时参数预览。
             </p>
 
@@ -326,7 +325,7 @@ export const HomePage: React.FC<HomePageProps> = ({
           </div>
         </section>
 
-        {/* 2. COMPONENTS OVERVIEW GALLERY (Like https://guokaigdg.github.io/animal-island-ui/) */}
+        {/* 2. COMPONENTS OVERVIEW GALLERY */}
         <section ref={overviewRef}>
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-6">
             <div>
@@ -577,7 +576,7 @@ export const HomePage: React.FC<HomePageProps> = ({
       </div>
 
       {/* =====================================================================
-          PIXEL COASTLINE & TREES FOOTER (Homage to animal-island-ui Footer)
+          PIXEL COASTLINE & TREES FOOTER
           ===================================================================== */}
       <footer className="mt-10 pt-10 pb-12 px-6 bg-[var(--px-surface-warm)] border-t-4 border-[var(--px-border)] text-center relative overflow-hidden">
         <div className="max-w-3xl mx-auto flex flex-col items-center gap-4">
@@ -595,16 +594,7 @@ export const HomePage: React.FC<HomePageProps> = ({
             </PixelButton>
           </div>
           <p className="m-0 text-xs font-bold text-[var(--px-ink-muted)]">
-            © 2026 Pixel Island UI · Inspired by{' '}
-            <a
-              href="https://github.com/guokaigdg/animal-island-ui"
-              target="_blank"
-              rel="noreferrer"
-              className="underline text-[var(--px-ink)]"
-            >
-              guokaigdg/animal-island-ui
-            </a>{' '}
-            · Managed with Storybook 10 · MIT License
+            © 2026 Pixel Island UI · Generated with gemini-4-argon · Managed with Storybook 10 · MIT License
           </p>
         </div>
       </footer>

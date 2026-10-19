@@ -147,7 +147,7 @@ export const PixelButton: React.FC<PixelButtonProps> = ({
 };
 
 /* ==========================================================================
-   2. PixelTitle — Swallowtail Pixel Ribbon Banner (animal-island-ui signature)
+   2. PixelTitle — Swallowtail Pixel Ribbon Banner
    ========================================================================== */
 export interface PixelTitleProps {
   children: React.ReactNode;

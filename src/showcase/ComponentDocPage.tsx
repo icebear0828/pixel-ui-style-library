@@ -80,7 +80,7 @@ export const ComponentDocPage: React.FC<ComponentDocPageProps> = ({
         </PixelButton>
       </div>
 
-      {/* Ribbon Banner + Typewriter Description (Direct nod to animal-island-ui ComponentPage.tsx) */}
+      {/* Ribbon Banner + Typewriter Description */}
       <div>
         <PixelTitle color={ribbonColor} size="lg" icon={item.icon}>
           {item.name} {item.cnName}
